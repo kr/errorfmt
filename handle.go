@@ -5,6 +5,12 @@ package errorfmt
 import "fmt"
 
 // Handlef decorates an error with additional context.
+//
+//   func Frob(name string) (err error) {
+//       defer errorfmt.Handlef("frob widget %s: %w", name, &err)
+//       ...
+//   }
+//
 // Its behavior is almost the same as fmt.Errorf,
 // with a few differences:
 //

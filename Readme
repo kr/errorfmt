@@ -1,3 +1,8 @@
 Package errorfmt annotates Go error values.
 
+    func Frob(name string) (err error) {
+        defer errorfmt.Handlef("frob widget %s: %w", name, &err)
+        ...
+    }
+
 https://kr.dev/errorfmt
